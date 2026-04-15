@@ -1,0 +1,498 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* CSS Document */
+
+
+/* =========================
+BASE
+========================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*  border: 1px solid green;*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  background: #A2D2FF;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+
+/* =========================
+TYPOGRAPHY
+========================= */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encode-sans-condensed-thin {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.encode-sans-condensed-extralight {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.encode-sans-condensed-light {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.encode-sans-condensed-regular {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encode-sans-condensed-medium {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.encode-sans-condensed-semibold {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.encode-sans-condensed-bold {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.encode-sans-condensed-extrabold {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.encode-sans-condensed-black {
+  font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/* =========================
+ELEMENTS
+========================= */
+.section-light-gray {
+  background-color: #efefef;
+}
+
+.container {
+  max-width: inherit;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-card {
+  max-width: inherit;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.hero-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+HEADER
+========================= */
+header {
+  background-color: #A2D2FF;
+  padding: 30px 0;
+}
+
+.header-logo {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+NAVIGATION
+========================= */
+nav {
+  background-color: #FFC02A;
+  padding: 15px 0;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  transition: all 250ms;
+  color: #A2D2FF;
+}
+
+.nav a:focus {
+  outline: 2px dotted #1c75bb;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-social-icons {
+  display: flex;
+  grid-gap: 20px;
+}
+
+.nav-social-icons a {
+  color: #ffffff;
+}
+
+.nav-social-icons a:hover {
+  text-decoration: none;
+  color: #A2D2FF;
+  transition: all 250ms;
+}
+
+
+/* =========================
+GRIDS
+========================= */
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+
+/* =========================
+BUTTONS / LINKS
+========================= */
+.tix-btn:link,
+.tix-btn:visited,
+.tix-btn:active,
+.tix-btn:focus {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFC02A;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 250ms ease;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.tix-btn i {
+  margin-left: 5px
+}
+
+
+/* =========================
+CARD
+========================= */
+.card {
+  background-color: #efefef;
+  border: solid 1px #cccccc;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.20);
+}
+
+.card-img {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-bottom: solid 1px #cccccc;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text-frame {
+  padding: 15px;
+}
+
+
+/* =========================
+GALLERY
+========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.gallery-item {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.20);
+  border: 1px solid #cccccc;
+  background: #fff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  display: none;
+}
+
+
+/* =========================
+TABLE
+========================= */
+.faq-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.faq-table thead th {
+  background-color: #F5D48B;
+  border: 1px solid #FFC02A;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+}
+
+.faq-table td {
+  border: 1px solid #FFC02A;
+  padding: 16px;
+  vertical-align: top;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+/* =========================
+BACKGROUND
+========================= */
+.pet-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pet-bg a:link,
+.pet-bg a:visited {
+  color: #ffffff;
+}
+
+.pet-bg p a:hover {
+  color: #bd1e2d;
+  text-decoration: underline;
+  transition: all 250ms;
+}
+
+.pet-bg a:active {
+  color: #bd1e2d;
+}
+
+.pet-bg a:focus {
+  outline: 2px dotted #1c75bb;
+}
+
+.pet-bg {
+  position: relative;
+  background-image: url("../img/pets-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.pet-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 18, 0.65)
+}
+
+
+/* =========================
+VISIT SECTION
+========================= */
+.visit-grid {
+  align-items: start;
+}
+
+.visit-left {
+  text-align: center;
+}
+
+.tix-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #FFC02A;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.tix-btn:hover {
+  background: #A2D2FF;
+  color: #fff;
+  transition: 200ms;
+}
+
+.visit-image {
+  width: 100%;
+  max-width: 520px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.visit h2 {
+  margin-top: 0;
+}
+
+.visit-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visit-btn {
+  display: block;
+  margin: 20px auto 0;
+  margin-top: 0;
+  text-align: center;
+  padding: 12px 22px;
+  background: #FFC02A;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 200ms;
+}
+
+.visit-btn:hover {
+  background: #A2D2FF;
+  color: #fff;
+}
+
+/* =========================
+TICKETS SECTION
+========================= */
+#tickets {
+  background-color: #efefef;
+  text-align: center;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
